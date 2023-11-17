@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "nsScript",
+  "version": "3.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "nsScript"
+  }
+}
